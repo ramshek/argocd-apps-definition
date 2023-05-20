@@ -17,7 +17,7 @@ spec:
       requeueAfterSeconds: 90
   template:
     metadata:
-      name: 'webapp-{{branch}}-{{number}}'
+      name: 'webapp-{{branch.sanitizedName}}-{{number}}'
       namespace: argocd
     spec:
       source:
